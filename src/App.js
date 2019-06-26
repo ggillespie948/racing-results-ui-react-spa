@@ -34,21 +34,23 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Header />
-          <Route
-            exact
-            path="/"
-            render={props => (
-              <React.Fragment>
-                {/* add search bar under header */}
+          <div className="container">
+            <Header />
+            <Route
+              exact
+              path="/"
+              render={props => (
+                <React.Fragment>
+                  {/* add search bar under header */}
 
-                <MeetingResults
-                  courseMeetings={this.state.courseMeetings}
-                  meetingResults={this.state.meetingResults}
-                />
-              </React.Fragment>
-            )}
-          />
+                  <MeetingResults
+                    courseMeetings={this.state.courseMeetings}
+                    meetingResults={this.state.meetingResults}
+                  />
+                </React.Fragment>
+              )}
+            />
+          </div>
 
           <Route path="/about" component={About} />
         </div>

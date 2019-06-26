@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function About() {
     return (
-        <React.Fragment>
+        <div className="container">
         <h1>About</h1>    
         <p>Horse racing results react ui V1.0.0.</p>
-        </React.Fragment>
+        </div>
     )
 }
