@@ -4,12 +4,31 @@ import "./App.css";
 import Header from "./components/layout/Header";
 import About from "./components/pages/About";
 import MeetingResults from "./components/results/MeetingResults";
+import axios from "axios";
+
 
 class App extends Component {
   state = {
     courseMeetings: [],
     meetingResults: []
   };
+
+  //web api hooks
+  componentDidMount() {
+    axios
+      .get(
+        "INSERT_API_ADDRESS",
+        { crossdomain: true }
+      )
+      .then(res => this.setState({ meetingResults: res.data }));
+
+    axios
+      .get(
+        "INSERT_API_ADDRESS",
+        { crossdomain: true }
+      )
+      .then(res => this.setState({ courseMeetings: res.data })  );
+  }
 
   render() {
     return (
@@ -25,7 +44,7 @@ class App extends Component {
 
                 <MeetingResults
                   courseMeetings={this.state.courseMeetings}
-                  meetingResults={this.state.todos}
+                  meetingResults={this.state.meetingResults}
                 />
               </React.Fragment>
             )}
