@@ -3,14 +3,13 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/layout/Header";
 import About from "./components/pages/About";
+import MeetingResults from "./components/results/MeetingResults";
 
 class App extends Component {
   state = {
     courseMeetings: [],
     meetingResults: []
-  }
-
-
+  };
 
   render() {
     return (
@@ -24,9 +23,10 @@ class App extends Component {
               <React.Fragment>
                 {/* add search bar under header */}
 
-
-                {/* add meeting results main component */}
-
+                <MeetingResults
+                  courseMeetings={this.state.courseMeetings}
+                  meetingResults={this.state.todos}
+                />
               </React.Fragment>
             )}
           />
