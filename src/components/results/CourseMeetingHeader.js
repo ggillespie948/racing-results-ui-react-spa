@@ -6,7 +6,7 @@ export class CourseMeetingHeader extends Component {
           background: "#071220",
           padding: "10px",
           color: "white",
-          borderBottom: "1px #ccc dotted",
+          borderBottom: "1px grey dotted",
         };
       };
   
