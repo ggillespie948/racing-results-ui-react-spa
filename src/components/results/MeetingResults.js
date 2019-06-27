@@ -58,10 +58,16 @@ export class MeetingResults extends Component {
                             <th>Name</th> 
                             <th>Price</th>
                         </tr>
-                        {meetingResult.resultEntries.map(resultEntry => (
+                        {meetingResult.resultEntries
+                        .sort(function(entry1, entry2){
+                          return entry1.position - entry2.position
+                        })
+                        .map(resultEntry => (
                           <ResultEntry resultEntry={resultEntry} />
                         ))}
                       </table>
+
+
                     </AccordionItemPanel>
                   </AccordionItem>
                 ))}
