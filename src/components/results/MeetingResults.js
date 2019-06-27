@@ -38,6 +38,9 @@ export class MeetingResults extends Component {
               {/* Render accordion dropdown for each race at meeting */}
               {this.props.meetingResults
                 .filter(i => i.courseMeetingId == courseMeeting.id)
+                .sort(function(meeting1, meeting2){
+                  return meeting1.raceNumber - meeting2.raceNumber
+                })
                 .map(meetingResult => (
                   <AccordionItem>
                     <AccordionItemHeading>
