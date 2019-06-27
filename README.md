@@ -1,4 +1,4 @@
-Horse Racing Results - React Wrapper
+## Horse Racing Results - React JS
 
 This project is a react js frontend using a pre-existing API from another repository on this account. The application is a SPA, where you can
 view the latest daily horse racing results throughout the UK ona  single page.
